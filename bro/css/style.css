@@ -1,1 +1,26 @@
-/* No CSS *//*# sourceMappingURL=style.css.map */
+#titlecube{
+    margin-top: 0px;
+}
+
+#topcube{
+    margin-top: 50px;
+    margin-left: 300px;
+    width: 800px;
+    height: 500px;
+    position: relative;
+}
+
+#text1{
+    font-size: 30px;
+    font-family: Microsoft JhengHei;
+    font-weight: bold;
+    color: #FFF;
+    position: absolute;
+    top: 50%;
+    left: 5%;
+}
+
+#msgcube{
+    margin-bottom: 0px;
+    margin-left: 100px;
+}
