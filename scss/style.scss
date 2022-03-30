@@ -1,9 +1,12 @@
 $white:#ffffff;
 $white-gray:#F4F4F4;
 $pale-gray:#b8b8b8;
+$middle-gray:#757575;
 $dark-gray:#4B4B4B;
 $black:#000000;
 $orange:#FF5E15;
+$blue:#0072EC;
+$green:#19AD79;
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -30,6 +33,31 @@ img{
     width: 100%;
 }
 
+h1{
+    font-size: 32px;
+    font-weight: bold;
+}
+
+h2{
+    font-size: 28px;
+    font-weight: bold;
+}
+
+h3{
+    font-size: 24px;
+    font-weight: bold;
+}
+
+h4{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+h5{
+    font-size: 18px;
+    font-weight: bold;
+}
+
 ul,li{
     list-style: none;
 }
@@ -39,12 +67,43 @@ body{
     overflow-y: auto;
     overflow-x: hidden;
     background-color: $white-gray;
+    position: relative;
+
+    &::before{
+        content: "";
+        background: url(../img/online/loginbg-left.png) left bottom no-repeat;
+        background-size: 25%;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+    }
+
+    &::after{
+        content: "";
+        background: url(../img/online/loginbg-right.png) right bottom no-repeat;
+        background-size: 25%;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        z-index: -1;
+    }
+
+    
 }
 
 .container{
     max-width: 1280px;
     margin: 0 auto;
     padding: 0 16px;
+}
+
+.content{
+    padding: 20px 0;
 }
 
 header{
@@ -209,4 +268,96 @@ main{
             margin-left: 16px;
         }
     }
+}
+
+.page-title{
+    padding: 16px 0;
+    margin-bottom: 20px;
+    border-bottom: 1px solid $pale-gray;
+}
+
+.notify{
+    margin-bottom: 40px;
+}
+
+.notify-title{
+    margin-bottom: 16px;
+    color: $dark-gray;
+}
+
+.notify-content{
+    background-color: $white;
+    border-radius: 8px;
+
+    .notify-block{
+        display: flex;
+        padding: 16px;
+
+        &.head{
+            border-radius: 8px 8px 0 0;
+            color: $white;
+        }
+
+        &.blue{
+            background-color: $blue;
+        }
+
+        &.green{
+            background-color: $green;
+        }
+
+        &.gray{
+            background-color: $middle-gray;
+        }
+
+        .n-item{
+            padding: 0 8px;
+            margin: auto 0;
+
+            &:first-child{
+                padding-left: 0;
+            }
+
+
+        }
+
+        .sum{
+            flex: 1 0 85%;
+            max-width: 85%;
+        }
+
+        .date{
+            flex: 1 0 6%;
+            max-width: 6%;
+            text-align: center;
+        }
+
+        .last{
+            margin: auto;
+        }
+
+        .new{
+            border-radius: 4px;
+            padding: 2px 4px;
+            color: $white;
+
+            &::after{
+                content: "new";
+            }
+
+            &.blue{
+                background-color: $blue;
+            }
+
+            &.green{
+                background-color: $green;
+            }
+
+            &.gray{
+                background-color: $middle-gray;
+            }
+        }
+        
+    }
+
 }
