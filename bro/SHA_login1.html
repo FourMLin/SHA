@@ -1,32 +1,46 @@
 <!doctype html>
 <html>
 <head>
+    <link href="/bootstrap-5.1.1-dist/css/bootstrap.min.css">
+    <link href="/bootstrap-5.1.1-dist/js/bootstrap.bundle.min.js">
     <link rel="stylesheet" href="/css/normalize.css">
     <link rel="stylesheet" href="/css/style.css" type="text/css">
 </head>
 <body bgcolor="#DDDDDD">
-    <div id="titlecube">
-        <div id="texttitle1">勞動部職業安全衛生署</div>
-        <div id="texttitle2">危險性機械及設備檢查資訊管理系統─事業單位檢查申請</div>
+    <div class="titlecube">
+        <div class="texttitle1">勞動部職業安全衛生署</div>
+        <div class="texttitle2">危險性機械及設備檢查資訊管理系統─事業單位檢查申請</div>
     </div>
-    <div id="topcube">
+    <div class="topcube">
         <img src="pic3.jpg" width="900" height="360">
-        <div id="texttop">事業單位檢查申請</div>
+        <div class="texttop">事業單位檢查申請</div>
     </div>
 
-    <div id="logincube">        
+    <div class="logincube">        
         <div class="lbtn-group checkout-lbtn" id="ltab">
             <a href="#" class="lbtn active" id="account" style="text-decoration: none;">帳號密碼登入</a>
             <a href="#" class="lbtn" id="digitalcert" style="text-decoration: none;">行動自然人憑證登入</a>
         </div>
 
-        <div id="tab-inner" class="">
-            
-        </div>
+        <form class="form-content">
+            <div id="ltab-inner" class="">
+                <input type="text" class="form-control" id="depart1" placeholder="單位代號">
+                <input type="text" class="form-control" id="IDnum1" placeholder="身分證號">
+                <input type="password" class="form-control" id="pwd" placeholder="系統密碼">
+          </div>
+        </form>
+
+        <form class="form-content">
+            <div id="ltab-inner" class="">
+                <input type="text" class="form-control" id="depart2" placeholder="單位代號">
+                <input type="text" class="form-control" id="IDnum2" placeholder="身分證號：＊＊＊＊＊＊＊＊＊＊"><br/>
+                <a href="#" class="lbtn-QR" id="qrbtn" style="text-decoration: none;">產生TW FidO登入QRcode</a>
+          </div>
+        </form>
     </div> 
 
-    <div id="msgcube">
-        <div id="textmsg">訊息專區</div>
+    <div class="msgcube">
+        <div class="textmsg">訊息專區</div>
         
         <div class="msgtab-content">
             <div class="mbtn-group checkout-mbtn" id="mtab">
@@ -36,7 +50,7 @@
                 <a href="#" class="mbtn" id="digitalcert" style="text-decoration: none;">宣導資訊</a>
             </div>
 
-            <div id="textannc1">
+            <div class="textannc1">
                 ＞提醒閒置超過20分鐘
                 <hr size="1px" align="center" width="100%">
                 ＞本網站網址採用SSL加密機制
@@ -50,7 +64,7 @@
             </div>
         </div>
 
-        <div id="texthelp">
+        <div class="texthelp">
             服務專區：
             <a href="https://www.google.com.tw" style="color: #AAA;">檢查機構(代檢機構)聯絡方式</a> |
             <a href="https://www.google.com.tw" style="color: #AAA;">系統操作說明</a> |
@@ -58,7 +72,7 @@
         </div>
     </div>
 
-    <div id="btmcube">
+    <div class="btmcube">
         @系統版本 2022
     </div>
     
@@ -66,6 +80,9 @@
         
         let mtabLink = document.getElementById("mtab").querySelectorAll("a");
         /*let mtabContents = document.getElementById("tab-inner").querySelectorAll(".form-content");*/
+
+        let lablink = document.getElementById("ltab").querySelectorAll("a");
+        let ltabContents = document.getElementById("ltab-inner").querySelectorAll(".form-content");
 
         window.onload = function () {
             
