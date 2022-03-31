@@ -4,21 +4,94 @@
     <link rel="stylesheet" href="/css/normalize.css">
     <link rel="stylesheet" href="/css/style.css" type="text/css">
 </head>
-<body>
+<body bgcolor="#DDDDDD">
     <div id="titlecube">
-        
+        <div id="texttitle1">勞動部職業安全衛生署</div>
+        <div id="texttitle2">危險性機械及設備檢查資訊管理系統─事業單位檢查申請</div>
     </div>
     <div id="topcube">
         <img src="pic3.jpg" width="900" height="360">
-        <div id="text1">事業單位檢查申請</div>
+        <div id="texttop">事業單位檢查申請</div>
     </div>
-    <div id="msgcube">
-        
-    </div>
-    <div id="logincube">
 
+    <div id="logincube">        
+        <div class="lbtn-group checkout-lbtn" id="ltab">
+            <a href="#" class="lbtn active" id="account" style="text-decoration: none;">帳號密碼登入</a>
+            <a href="#" class="lbtn" id="digitalcert" style="text-decoration: none;">行動自然人憑證登入</a>
+        </div>
+
+        <div id="tab-inner" class="">
+            
+        </div>
+    </div> 
+
+    <div id="msgcube">
+        <div id="textmsg">訊息專區</div>
+        
+        <div class="msgtab-content">
+            <div class="mbtn-group checkout-mbtn" id="mtab">
+                <a href="#" class="mbtn active" id="account" style="text-decoration: none;">注意事項</a>
+                <a href="#" class="mbtn" id="digitalcert" style="text-decoration: none;">相關法規</a>
+                <a href="#" class="mbtn" id="digitalcert" style="text-decoration: none;">最新消息</a>
+                <a href="#" class="mbtn" id="digitalcert" style="text-decoration: none;">宣導資訊</a>
+            </div>
+
+            <div id="textannc1">
+                ＞提醒閒置超過20分鐘
+                <hr size="1px" align="center" width="100%">
+                ＞本網站網址採用SSL加密機制
+                <hr size="1px" align="center" width="100%">
+                &nbsp<br/>
+                <hr size="1px" align="center" width="100%">
+                &nbsp<br/>
+                <hr size="1px" align="center" width="100%">
+                &nbsp<br/>
+                <hr size="1px" align="center" width="100%">
+            </div>
+        </div>
+
+        <div id="texthelp">
+            服務專區：
+            <a href="https://www.google.com.tw" style="color: #AAA;">檢查機構(代檢機構)聯絡方式</a> |
+            <a href="https://www.google.com.tw" style="color: #AAA;">系統操作說明</a> |
+            <a href="https://www.google.com.tw" style="color: #AAA;">系統客服信箱</a>
+        </div>
     </div>
-    <script type="text/javascript" defer></script>
+
+    <div id="btmcube">
+        @系統版本 2022
+    </div>
     
+    <script type="text/javascript" defer>
+        
+        let mtabLink = document.getElementById("mtab").querySelectorAll("a");
+        /*let mtabContents = document.getElementById("tab-inner").querySelectorAll(".form-content");*/
+
+        window.onload = function () {
+            
+            panelDisplay(mtabLink[0]);
+            for (let i = 0; i < mtabLink.length; i++) {
+                mtabLink[i].addEventListener("click", function (e) {
+                e.preventDefault();
+                panelDisplay(this);
+                });
+            }
+
+            function panelDisplay(activePanel) {
+
+                for (let i = 0; i < mtabLink.length; i++) {
+
+                if (mtabLink[i] == activePanel) {
+                    mtabLink[i].classList.add("active");
+                    /*tabContents[i].style.display = "block";*/
+                } else {
+                    mtabLink[i].classList.remove("active");
+                    /*tabContents[i].style.display = "none";*/
+                }
+                }
+            }
+        };
+    </script>
+
 </body>
 </html>
