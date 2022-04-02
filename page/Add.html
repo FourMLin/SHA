@@ -108,18 +108,338 @@
                 <div class="page-title">
                     <h3>定期檢查申請作業</h3>
                     <div class="page-title-btns">
-
+                        <a href="#" class="btns btn-orange">
+                            <div class="text">新增</div>
+                        </a>
+                        <a href="#" class="btns btn-black">
+                            <div class="text">修改</div>
+                        </a>
+                        <a href="#" class="btns btn-black">
+                            <div class="text">刪除</div>
+                        </a>
+                        <a href="#" class="btns btn-black">
+                            <div class="text">查詢</div>
+                        </a>
                     </div>
                 </div>
-                
-                
+                <div class="block-title">
+                    <h4>新增</h4>
+                </div>
+                <form class="form-wrap">
+                    <div class="form-title">
+                        "<span>＊</span>" 標記者為必須填寫的欄位。
+                    </div>
+                    <div class="form-body">
+                        <div class="form-col col-sm-12 col-md-6">
+                            <div class="form-name"><span>申請文號</span></div>
+                            <div class="form-group">
+                                <p>1059002402</p>
+                            </div>
+                        </div>
+                        <div class="form-col col-sm-12 col-md-6">
+                            <div class="form-name"><span>案件編號</span></div>
+                            <div class="form-group">
+                                <p>1059002402</p>
+                            </div>
+                        </div>
+                        <div class="form-col col-sm-12 col-md-12">
+                            <div class="form-name require"><span>檢查機構</span></div>
+                            <div class="form-group">
+                                <select class="input-style">
+                                    <option value="0">(213)中華民國工業安全衛生協會</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-col col-sm-12 col-md-6">
+                            <div class="form-name require"><span>申請日期</span></div>
+                            <div class="form-group">
+                                <input class="input-style" type="date">
+                                <div class="input-hint w-50">(例：0980101)</div>
+                            </div>
+                        </div>
+                        <div class="form-col col-sm-12 col-md-6">
+                            <div class="form-name require"><span>檢查種類</span></div>
+                            <div class="form-group">
+                                <select class="input-style">
+                                    <option value="0">(F)定期</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-col col-sm-12 col-md-6">
+                            <div class="form-name require"><span>設備代碼</span></div>
+                            <div class="form-group">
+                                <input class="input-style" type="text">
+                            </div>
+                        </div>
+                        <div class="form-col col-sm-12 col-md-6">
+                            <div class="form-name"><span>刻印號碼</span></div>
+                            <div class="form-group">
+                                <input class="input-style" type="text" value="213PU01195">
+                            </div>
+                        </div>
+                        <div class="form-col col-sm-12 col-md-12">
+                            <div class="form-name"><span>廠商設備編號</span></div>
+                            <div class="form-group">
+                                <input class="input-style" type="text" value="213PU01195">
+                            </div>
+                        </div>
+                        <div class="form-col col-sm-12 col-md-6">
+                            <div class="form-name"><span>機械或設備</span></div>
+                            <div class="form-group">
+                                <div class="input-radio">
+                                    <input type="radio" id="device" name="dm" value="device" checked>
+                                    <label for="device">設備</label>
+                                </div>
+                                <div class="input-radio">
+                                    <input type="radio" id="machine" name="dm" value="machine">
+                                    <label for="machine">機械</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-col col-sm-12 col-md-6">
+                            <div class="form-name require"><span>檢查種類</span></div>
+                            <div class="form-group">
+                                <select class="input-style">
+                                    <option value="0">(P)第一種壓力容器</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-col col-sm-12 col-md-12">
+                            <div class="form-name"><span>設備型式</span></div>
+                            <div class="form-group">
+                                <select class="input-style">
+                                    <option value="0">(P04)多管型</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-col col-sm-12 col-md-12">
+                            <div class="form-name"><span>設備名稱</span></div>
+                            <div class="form-group">
+                                <input class="input-style" type="text" value="E-1415立式多管型驟餾氣冷卻器">
+                            </div>
+                        </div>
+                        <div class="form-col col-sm-12 col-md-12">
+                            <div class="form-name"><span>檢查合格證號碼</span></div>
+                            <div class="form-group">
+                                <input class="input-style" type="text" value="213104P0366">
+                            </div>
+                        </div>
+                        <div class="form-col col-sm-12 col-md-12">
+                            <div class="form-name"><span>檢查合格證有效期間</span></div>
+                            <div class="form-group">
+                                <input class="input-style" type="date">
+                                <p>至</p>
+                                <input class="input-style" type="date">
+                                <div class="input-hint w-50">(例：0980101)</div>
+                            </div>
+                        </div>
+                        <div class="form-col col-sm-12 col-md-6">
+                            <div class="form-name require"><span>初複查</span></div>
+                            <div class="form-group">
+                                <div class="input-radio">
+                                    <input type="radio" id="first" name="check" value="first" checked>
+                                    <label for="first">初查</label>
+                                </div>
+                                <div class="input-radio">
+                                    <input type="radio" id="again" name="check" value="again">
+                                    <label for="again">複查</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-col col-sm-12 col-md-6">
+                            <div class="form-name require"><span>假日(非正常工作時間)</span></div>
+                            <div class="form-group">
+                                <div class="input-radio">
+                                    <input type="radio" id="hYes" name="holiday" value="hYes" checked>
+                                    <label for="hYes">是</label>
+                                </div>
+                                <div class="input-radio">
+                                    <input type="radio" id="hNo" name="holiday" value="hNo">
+                                    <label for="hNo">否</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-col col-sm-12 col-md-6">
+                            <div class="form-name require"><span>內部檢查</span></div>
+                            <div class="form-group">
+                                <div class="input-radio">
+                                    <input type="radio" id="inYes" name="indoor" value="inYes" checked>
+                                    <label for="inYes">是</label>
+                                </div>
+                                <div class="input-radio">
+                                    <input type="radio" id="inNo" name="indoor" value="inNo">
+                                    <label for="inNo">否</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-col col-sm-12 col-md-6">
+                            <div class="form-name"><span>是否延長期限或替代檢查</span></div>
+                            <div class="form-group">
+                                <div class="input-radio">
+                                    <input type="radio" id="exYes" name="extend" value="exYes" checked>
+                                    <label for="exYes">是</label>
+                                </div>
+                                <div class="input-radio">
+                                    <input type="radio" id="exNo" name="extend" value="exNo">
+                                    <label for="exNo">否</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-col col-sm-12 col-md-6">
+                            <div class="form-name require"><span>最近內檢日期</span></div>
+                            <div class="form-group">
+                                <p>1040817</p>
+                            </div>
+                        </div>
+                        <div class="form-col col-sm-12 col-md-6">
+                            <div class="form-name require"><span>延長期限</span></div>
+                            <div class="form-group">
+                            </div>
+                        </div>
+                        <div class="form-col col-sm-12 col-md-6">
+                            <div class="form-name require"><span>收費型式</span></div>
+                            <div class="form-group">
+                                <select class="input-style">
+                                    <option value="0">(P)第一種壓力容器</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-col col-sm-12 col-md-6">
+                            <div class="form-name require"><span>收費級距</span></div>
+                            <div class="form-group">
+                                <select class="input-style">
+                                    <option value="0">請選擇</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-col col-sm-12 col-md-12">
+                            <div class="form-name require"><span>檢查費</span></div>
+                            <div class="form-group">
+                                <p>900</p>
+                            </div>
+                        </div>
+                        <div class="form-col col-sm-12 col-md-6">
+                            <div class="form-name"><span>受檢地址所屬縣市</span></div>
+                            <div class="form-group">
+                                <select class="input-style">
+                                    <option value="0">(42)高雄市(原高雄縣)</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-col col-sm-12 col-md-6">
+                            <div class="form-name"><span>受檢地址所屬區號</span></div>
+                            <div class="form-group">
+                                <select class="input-style">
+                                    <option value="0">(832)高雄市林園區</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-col col-sm-12 col-md-12">
+                            <div class="form-name"><span>受檢地址</span></div>
+                            <div class="form-group">
+                                <input class="input-style" type="text" value="高雄市林園區工業一路3號">
+                            </div>
+                        </div>
+                        <div class="form-col col-sm-12 col-md-6">
+                            <div class="form-name"><span>聯絡人</span></div>
+                            <div class="form-group">
+                                <input class="input-style" type="text" value="陳榮弘">
+                            </div>
+                        </div>
+                        <div class="form-col col-sm-12 col-md-6">
+                            <div class="form-name"><span>聯絡電話</span></div>
+                            <div class="form-group">
+                                <input class="input-style" type="text" value="07-6412601#1219">
+                            </div>
+                        </div>
+                        <div class="form-col col-sm-12 col-md-6">
+                            <div class="form-name"><span>聯絡人手機</span></div>
+                            <div class="form-group">
+                                <input class="input-style" type="text" value="">
+                            </div>
+                        </div>
+                        <div class="form-col col-sm-12 col-md-6">
+                            <div class="form-name"><span>傳真</span></div>
+                            <div class="form-group">
+                                <input class="input-style" type="text" value="317-317-3137">
+                            </div>
+                        </div>
+                        <div class="form-col col-sm-12 col-md-12">
+                            <div class="form-name"><span>收據抬頭</span></div>
+                            <div class="form-group">
+                                <input class="input-style" type="text" value="">
+                            </div>
+                        </div>
+                        <div class="form-col col-sm-12 col-md-12">
+                            <div class="form-name"><span>收據寄發地址</span></div>
+                            <div class="form-group">
+                                <input class="input-style" type="text" value="">
+                            </div>
+                        </div>
+                        <div class="form-col col-sm-12 col-md-12">
+                            <div class="form-name"><span>備註</span></div>
+                            <div class="form-group">
+                                <input class="input-style" type="text" value="">
+                            </div>
+                        </div>
+                        <div class="form-col col-sm-12 col-md-12">
+                            <div class="form-name"><span>傳熱面積</span></div>
+                            <div class="form-group">
+                                <p>平方公尺</p>
+                            </div>
+                        </div>
+                        <div class="form-col col-sm-12 col-md-12">
+                            <div class="form-name"><span>最高使用壓力</span></div>
+                            <div class="form-group">
+                                <p>胴側：7；管側：7；夾套側：10.5 Kgf/cm2</p>
+                            </div>
+                        </div>
+                        <div class="form-col col-sm-12 col-md-12">
+                            <div class="form-name"><span>最高使用溫度</span></div>
+                            <div class="form-group">
+                                <p>胴側：260；管側：288；夾套側：260 ℃</p>
+                            </div>
+                        </div>
+                        <div class="form-col col-sm-12 col-md-12">
+                            <div class="form-name"><span>內容積</span></div>
+                            <div class="form-group">
+                                <p>胴側：0.51；管側：0.5；夾套側：0.04 立方公尺</p>
+                            </div>
+                        </div>
+                        <div class="form-col col-sm-12 col-md-12">
+                            <div class="form-name"><span>內容物名稱</span></div>
+                            <div class="form-group">
+                                <p>胴側：冷卻水；管側：乙烯；夾套側：低壓蒸汽</p>
+                            </div>
+                        </div>
+                        <div class="form-col col-sm-12 col-md-12">
+                            <div class="form-name"><span>有無毒性</span></div>
+                            <div class="form-group">
+                                <div class="input-radio">
+                                    <input type="radio" id="poisenYes" name="poisen" value="poisenYes" checked>
+                                    <label for="poisenYes">有</label>
+                                </div>
+                                <div class="input-radio">
+                                    <input type="radio" id="poisenNo" name="poisen" value="poisenNo">
+                                    <label for="poisenNo">無</label>
+                                </div>
+                            </div>
+                        </div>
 
-               
+                    </div>
+                </form>
+                
                 
                 
             </div>
         </div>
     </main>
+
+    <footer>
+        <div class="container">
+            <p>@ 系統版本：2022 Optimize Version 危險性機械及設備檢查資訊管理系統　建議使用1024 x 768 以上瀏覽本站以獲取最佳瀏覽效果。</p>
+        </div>
+    </footer>
 
 
 </body>
