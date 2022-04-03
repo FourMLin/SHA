@@ -764,8 +764,15 @@ body::after {
   padding: 0 16px;
 }
 
+.container-full {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
 .content {
-  padding: 20px 0 50px;
+  padding: 20px 0;
 }
 
 header.page-head {
@@ -774,17 +781,21 @@ header.page-head {
 }
 
 main {
-  padding: 20px 0;
+  padding: 20px 0 50px;
   min-height: calc(100vh - 133px);
 }
 
 footer {
-  background-color: #4B4B4B;
+  background-color: #ffffff;
   padding: 16px;
-  color: #ffffff;
   font-size: 12px;
   text-align: center;
-  height: 50px;
+  min-height: 50px;
+}
+
+footer.gray {
+  background-color: #4B4B4B;
+  color: #ffffff;
 }
 
 .m-auto {
@@ -1019,6 +1030,7 @@ footer {
 .notify-content {
   background-color: #ffffff;
   border-radius: 8px;
+  margin-top: 20px;
 }
 
 .notify-content .notify-block {
@@ -1056,16 +1068,16 @@ footer {
 
 .notify-content .notify-block .sum {
   -webkit-box-flex: 1;
-      -ms-flex: 1 0 85%;
-          flex: 1 0 85%;
-  max-width: 85%;
+      -ms-flex: 1 0 80%;
+          flex: 1 0 80%;
+  max-width: 80%;
 }
 
 .notify-content .notify-block .date {
   -webkit-box-flex: 1;
-      -ms-flex: 1 0 6%;
-          flex: 1 0 6%;
-  max-width: 6%;
+      -ms-flex: 1 0 10%;
+          flex: 1 0 10%;
+  max-width: 10%;
   text-align: center;
 }
 
@@ -1167,6 +1179,7 @@ select.input-style {
   padding: 8px;
   background-color: #F4F4F4;
   border-bottom: 1px solid #757575;
+  position: relative;
 }
 
 input.input-style:focus,
@@ -1174,9 +1187,27 @@ select.input-style:focus {
   border-bottom: 1px solid #FF5E15;
 }
 
-input.input-style.error,
-select.input-style.error {
+input.input-style.succes,
+select.input-style.succes {
+  border: 1px solid #0072EC;
+}
+
+input.error,
+select.error {
   border: 1px solid #DA1E28;
+}
+
+input.error.icon,
+select.error.icon {
+  content: "";
+  background: url(../img/online/message-alert.svg) center no-repeat;
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 16px;
+  height: 16px;
 }
 
 input:focus,

@@ -2,6 +2,7 @@ $white:#ffffff;
 $white-gray:#F4F4F4;
 $light-gray:#e0e0e0;
 $pale-gray:#b8b8b8;
+$gray:#E8EAEB;
 $middle-gray:#757575;
 $dark-gray:#4B4B4B;
 $deep-gray:#393939;
@@ -194,8 +195,15 @@ body {
     padding: 0 16px;
 }
 
+.container-full{
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
 .content {
-    padding: 20px 0 50px;
+    padding: 20px 0;
 }
 
 header {
@@ -207,17 +215,21 @@ header {
 }
 
 main {
-    padding: 20px 0;
+    padding: 20px 0 50px;
     min-height: calc(100vh - 133px);
 }
 
 footer {
-    background-color: $dark-gray;
+    background-color: $white;
     padding: 16px;
-    color: $white;
     font-size: 12px;
     text-align: center;
-    height: 50px;
+    min-height: 50px;
+
+    &.gray{
+        background-color: $dark-gray;
+        color: $white;
+    }
 }
 
 .m-auto {
@@ -452,6 +464,7 @@ footer {
 .notify-content {
     background-color: $white;
     border-radius: 8px;
+    margin-top: 20px;
 
     .notify-block {
         display: flex;
@@ -486,13 +499,13 @@ footer {
         }
 
         .sum {
-            flex: 1 0 85%;
-            max-width: 85%;
+            flex: 1 0 80%;
+            max-width: 80%;
         }
 
         .date {
-            flex: 1 0 6%;
-            max-width: 6%;
+            flex: 1 0 10%;
+            max-width: 10%;
             text-align: center;
         }
 
@@ -583,15 +596,31 @@ select {
         padding: 8px;
         background-color: $white-gray;
         border-bottom: 1px solid $middle-gray;
+        position: relative;
 
         &:focus {
             border-bottom: 1px solid $orange;
         }
 
-        &.error{
-            border: 1px solid $red;
+        &.succes{
+            border: 1px solid $blue;
         }
 
+    }
+
+    &.error{
+        border: 1px solid $red;
+
+        &.icon{
+            content: "";
+            background: url(../img/online/message-alert.svg) center no-repeat;
+            position: absolute;
+            right: 8px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 16px;
+            height: 16px;
+        }
     }
 
     &:focus {
