@@ -1,0 +1,11 @@
+<svg id="登出icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <g id="Group_10989" data-name="Group 10989">
+    <path id="Path_10699" data-name="Path 10699" d="M0,0H24V24H0Z" fill="none"/>
+  </g>
+  <g id="Group_10991" data-name="Group 10991">
+    <g id="Group_10990" data-name="Group 10990">
+      <path id="Path_10700" data-name="Path 10700" d="M5,5h6a1,1,0,0,0,1-1h0a1,1,0,0,0-1-1H5A2.006,2.006,0,0,0,3,5V19a2.006,2.006,0,0,0,2,2h6a1,1,0,0,0,1-1h0a1,1,0,0,0-1-1H5Z" fill="#da1e28"/>
+      <path id="Path_10701" data-name="Path 10701" d="M20.65,11.65,17.86,8.86a.5.5,0,0,0-.86.35V11H10a1,1,0,0,0-1,1H9a1,1,0,0,0,1,1h7v1.79a.5.5,0,0,0,.85.35l2.79-2.79A.492.492,0,0,0,20.65,11.65Z" fill="#da1e28"/>
+    </g>
+  </g>
+</svg>

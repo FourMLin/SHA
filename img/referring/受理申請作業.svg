@@ -1,0 +1,11 @@
+<svg id="受理申請作業" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <g id="Group_10992" data-name="Group 10992">
+    <rect id="Rectangle_38" data-name="Rectangle 38" width="24" height="24" fill="none"/>
+  </g>
+  <g id="Group_10994" data-name="Group 10994">
+    <g id="Group_10993" data-name="Group 10993">
+      <path id="Path_10703" data-name="Path 10703" d="M5,5H7V6A2.006,2.006,0,0,0,9,8h6a2.006,2.006,0,0,0,2-2V5h2v5h2V5a2.006,2.006,0,0,0-2-2H14.82A2.988,2.988,0,0,0,9.18,3H5A2.006,2.006,0,0,0,3,5V19a2.006,2.006,0,0,0,2,2h6V19H5Zm7-2a1,1,0,1,1-1,1A1,1,0,0,1,12,3Z" fill="#393939"/>
+      <path id="Path_10704" data-name="Path 10704" d="M21.75,12.25a1.068,1.068,0,0,0-1.5,0L15.51,17l-2.26-2.25a1.068,1.068,0,0,0-1.5,0h0a1.068,1.068,0,0,0,0,1.5l3.05,3.04a1,1,0,0,0,1.41,0l5.53-5.54A1.059,1.059,0,0,0,21.75,12.25Z" fill="#393939"/>
+    </g>
+  </g>
+</svg>
