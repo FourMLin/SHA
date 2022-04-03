@@ -1,18 +1,17 @@
 <!doctype html>
 <html>
 <head>
-    <link href="/bootstrap-5.1.1-dist/css/bootstrap.min.css">
-    <link href="/bootstrap-5.1.1-dist/js/bootstrap.bundle.min.js">
-    <link rel="stylesheet" href="/css/normalize.css">
-    <link rel="stylesheet" href="/css/style.css" type="text/css">
+    <link href="/bootstrap-5.1.1-dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/normalize.css" rel="stylesheet">
+    <link href="/css/style.css" rel="stylesheet" type="text/css">
 </head>
-<body bgcolor="#DDDDDD">
+<body>
     <div class="titlecube">
         <div class="texttitle1">勞動部職業安全衛生署</div>
         <div class="texttitle2">危險性機械及設備檢查資訊管理系統─事業單位檢查申請</div>
     </div>
     <div class="topcube">
-        <img src="/pic/pic3.jpg" width="900" height="360">
+        <img class="slide1" src="/pic/slide1.jpg" width="100%" height="100%">
         <div class="texttop">事業單位檢查申請</div>
     </div>
 
@@ -44,10 +43,12 @@
         
         <div class="msgtab-content">
             <div class="mbtn-group checkout-mbtn" id="mtab">
-                <a href="#" class="mbtn active" id="account" style="text-decoration: none;">注意事項</a>
-                <a href="#" class="mbtn" id="digitalcert" style="text-decoration: none;">相關法規</a>
-                <a href="#" class="mbtn" id="digitalcert" style="text-decoration: none;">最新消息</a>
-                <a href="#" class="mbtn" id="digitalcert" style="text-decoration: none;">宣導資訊</a>
+                <ul class="nav nav-pills" id="pills-tab" role="tablist">
+                    <li><a href="#" class="mbtn active" id="pill-attention" data-bs-toggle="pill" style="text-decoration: none;">注意事項</a></li>
+                    <li><a href="#" class="mbtn" id="pill-statute" data-bs-toggle="pill" style="text-decoration: none;">相關法規</a></li>
+                    <li><a href="#" class="mbtn" id="pill-news" data-bs-toggle="pill" style="text-decoration: none;">最新消息</a></li>
+                    <li><a href="#" class="mbtn" id="pill-info" data-bs-toggle="pill" style="text-decoration: none;">宣導資訊</a></li>
+                </ul>
             </div>
 
             <div class="textannc1">
@@ -76,15 +77,15 @@
         @系統版本 2022
     </div>
     
-    <script type="text/javascript" defer>
+    <script src="/bootstrap-5.1.1-dist/js/bootstrap.bundle.min.js">
         
-        let mtabLink = document.getElementById("mtab").querySelectorAll("a");
-        /*let mtabContents = document.getElementById("tab-inner").querySelectorAll(".form-content");*/
+        /*let mtabLink = document.getElementById("mtab").querySelectorAll("a");
+        /*let mtabContents = document.getElementById("tab-inner").querySelectorAll(".form-content");
 
         let lablink = document.getElementById("ltab").querySelectorAll("a");
         let ltabContents = document.getElementById("ltab-inner").querySelectorAll(".form-content");
 
-        window.onload = function () {
+        /*window.onload = function () {
             
             panelDisplay(mtabLink[0]);
             for (let i = 0; i < mtabLink.length; i++) {
@@ -100,14 +101,14 @@
 
                 if (mtabLink[i] == activePanel) {
                     mtabLink[i].classList.add("active");
-                    /*tabContents[i].style.display = "block";*/
+                    /*tabContents[i].style.display = "block";
                 } else {
                     mtabLink[i].classList.remove("active");
-                    /*tabContents[i].style.display = "none";*/
+                    /*tabContents[i].style.display = "none";
                 }
                 }
             }
-        };
+        };*/
     </script>
 
 </body>
