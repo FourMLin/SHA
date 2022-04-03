@@ -1,0 +1,197 @@
+body{
+    background-color: #E8EaE8;
+    font-family: 'Segoe UI';
+    text-align: left;
+    vertical-align: baseline;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.titlecube{
+    width: 1920px;
+    height: 70px;
+    color: #FFFFFF;
+    background-color: #272b35;
+    text-align: left;
+}
+
+.shalogo{
+    width: 51.3px;
+    height: 51.3px;
+    float: left;
+    padding-left: 9rem;
+    padding-top: 0.65rem;
+}
+
+span{
+    font-weight: lighter;
+    font-size: 14px;
+    padding-left: 0.35rem;
+    padding-top: 0.8rem;
+}
+
+.title1{
+    font-weight: bold;
+    font-size: 20px;
+    padding-left: 12.5rem;
+    padding-top: 1rem;
+}
+
+.slidecube .slide2{
+    background-color: transparent;
+    float: left;
+    width: 1156px;
+    height: 1010px;
+}
+
+.logincube{
+    background-color: #FFFFFF;
+    width: 764px;
+    height: 1010px;
+    margin-left: 72.25rem;
+    position: relative;
+}
+
+.textlogin{
+    color: #171717;
+    font-size: 40px;
+    font-weight: bold;
+    padding-top: 2.8rem;
+    padding-left: 5.2rem;
+}
+
+.hr1{
+    margin-left: 5.2rem;
+    margin-top: 0.8rem;
+}
+
+.hr2{
+    margin-left: 5.2rem;
+    margin-top: 8rem;
+}
+
+.lglabel{
+    font-size: 15px;
+    padding-top: 2rem;
+    padding-left: 5.2rem;
+    padding-bottom: 0.5rem;    
+}
+
+.lginput{
+    margin-left: 5.2rem;
+    width: 600px;
+    height: 40px;
+    background-color: #F4F4F4;
+    border-style: none;
+    border-bottom: 1px solid;
+    outline-color: #0F62FE;
+}
+
+.vercode{
+    margin-left: 5.2rem;
+    width: 200px;
+    height: 40px;
+    background-color: #F4F4F4;
+    border-style: none;
+    border-bottom: 1px solid;
+    outline-color: #0F62FE;
+}
+
+.verpic{
+    background-color: transparent;
+    float: center;
+    vertical-align: middle;
+    margin-left: 0.5rem;
+    margin-top: -0.3rem;
+}
+
+.lbtn-ver{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 0.5rem;
+    width: 129px;
+    height: 40px;
+    border: 1px solid #0F62FE;
+    background-color: #FFFFFF;
+    color: #0F62FE;
+    font-size: 15px;
+}
+
+.lbtn{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 5.2rem;
+    margin-top: 2rem;
+    width: 129px;
+    height: 40px;
+    border: 1px solid #0F62FE;
+    background-color: #0F62FE;
+    color: #FFFFFF;
+    font-size: 15px;
+}
+
+.lbtn-digi{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 5.2rem;
+    margin-top: 2rem;
+    width: 129px;
+    height: 40px;
+    border: 1px solid #0F62FE;
+    background-color: #FFFFFF;
+    color: #0F62FE;
+    font-size: 15px;
+}
+
+.digilabel{
+    margin-left: 14rem;
+    margin-top: -1.8rem;
+    font-size: 14px;
+}
+
+.atten{
+    font-family: 'Noto Sans CJK TC DemiLight';
+}
+
+.textatten{
+    font-size: 24px;
+    padding-left: 5.6rem;
+    padding-top: 1rem;
+}
+
+.atten-inner{
+    font-size: 14px;
+    padding-left: 5.6rem;
+    line-height: 21px;
+}
+
+.atten-item{
+    font-size: 14px;
+    color: #000000;
+    text-indent: 0rem;
+}
+
+.atten-btn{
+    color: #2B74FE;
+    font-size: 14px;
+}
+
+.btmcube{
+    background-color: #F4F4F4;
+    width: 764px;
+    height: 70px;
+    position: absolute;
+    bottom: 0rem;
+}
+
+.textbtm{
+    font-family: 'Noto Sans CJK TC DemiLight';
+    font-size: 13px;
+    text-align: center;
+    line-height: 22px;
+    padding-top: 0.9rem;
+}

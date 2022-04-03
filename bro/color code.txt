@@ -1,0 +1,14 @@
+:root {
+
+/* Colors: */
+--unnamed-color-e8eaeb: #E8EAEB;
+--unnamed-color-ffffff: #FFFFFF;
+--unnamed-color-8d8d8d: #8D8D8D;
+--unnamed-color-e8f0fe: #E8F0FE;
+--unnamed-color-0f62fe: #0F62FE;
+--unnamed-color-da1e28: #DA1E28;
+--unnamed-color-161616: #161616;
+--unnamed-color-393939: #393939;
+--unnamed-color-ff5e15: #FF5E15;
+--unnamed-color-4b4b4b: #4B4B4B;
+}
