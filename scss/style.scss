@@ -195,7 +195,7 @@ body {
     padding: 0 16px;
 }
 
-.container-full{
+.container-full {
     width: 100%;
     max-width: 100%;
     margin: 0 auto;
@@ -212,11 +212,24 @@ header {
         background-color: $white;
         min-height: 133px;
     }
+
+    &.dark-mod{
+        background-color: $deep-gray;
+        color: $white;
+    }
 }
 
 main {
-    padding: 20px 0 50px;
-    min-height: calc(100vh - 133px);
+
+    &.business{
+        padding: 20px 0 50px;
+        min-height: calc(100vh - 133px);
+    }
+
+    &.inspect-mod{
+        display: flex;
+    }
+
 }
 
 footer {
@@ -226,7 +239,7 @@ footer {
     text-align: center;
     min-height: 50px;
 
-    &.gray{
+    &.gray {
         background-color: $dark-gray;
         color: $white;
     }
@@ -243,6 +256,7 @@ footer {
 .btns {
     padding: 8px 16px;
     text-align: center;
+    display: inline-block;
 
     .text {
         min-width: 50px;
@@ -262,7 +276,7 @@ footer {
         color: $white;
     }
 
-    &.btn-outline-orange{
+    &.btn-outline-orange {
         background-color: $white;
         color: $orange;
         border: 1px solid $orange;
@@ -602,26 +616,10 @@ select {
             border-bottom: 1px solid $orange;
         }
 
-        &.succes{
-            border: 1px solid $blue;
-        }
 
     }
 
-    &.error{
-        border: 1px solid $red;
 
-        &.icon{
-            content: "";
-            background: url(../img/online/message-alert.svg) center no-repeat;
-            position: absolute;
-            right: 8px;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 16px;
-            height: 16px;
-        }
-    }
 
     &:focus {
         border: 1px solid $orange;
@@ -681,35 +679,91 @@ select {
         max-width: 600px;
         display: flex;
         margin-right: -1rem;
-
+    
         p {
             margin: auto 0;
             padding: 0 8px;
         }
-
+    
         .w-50 {
             width: 60%;
             max-width: 60%;
         }
-
+    
         .input-hint {
             margin: auto 0;
             margin-left: 16px;
         }
-
+    
         .input-radio {
             margin: auto 0;
             display: flex;
-
+    
             label {
                 padding-right: 32px;
                 cursor: pointer;
             }
+    
+        }
 
+    }
+
+
+}
+
+.form-group{
+
+    &.error {
+    
+        .input-style {
+            border: 1px solid $red;
+        }
+
+        .icon {
+            position: relative;
+
+            &::after {
+                content: "";
+                background: url(../img/online/message-alert.svg) center no-repeat;
+                position: absolute;
+                right: 16px;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 20px;
+                height: 20px;
+            }
+        }
+    }
+
+    &.succes {
+        
+
+        .input-style {
+            border: 1px solid $blue;
+        }
+    }
+
+    &.prefix{
+        position: relative;
+        
+        input{
+            padding-left: 80px;
+        }
+
+        &::before{
+            content: attr(data-prefix);
+            position: absolute;
+            top: 50%;
+            left: 8px;
+            transform: translateY(-50%);
+            z-index: 5;
+            color: $middle-gray;
         }
     }
 
 }
+
+
 
 .table-part {
     margin-top: 50px;
@@ -882,6 +936,7 @@ select {
 
 .operate-part {
     display: flex;
+    margin-top: 35px;
 
     .o-block {
         background-color: $white;
@@ -891,7 +946,7 @@ select {
     .o-title {
         display: flex;
 
-        h4{
+        h4 {
             display: flex;
             flex: auto;
             margin: auto 0;
@@ -907,7 +962,7 @@ select {
 
         }
 
-        
+
     }
 
     .home-info {
@@ -998,40 +1053,122 @@ select {
     }
 }
 
-.login-form{
+.login-form {
 
-    .l-block{
+    .l-block {
         padding: 16px 0;
     }
 }
 
-.forgot-p{
+.forgot-p {
     font-size: 14px;
     color: $middle-gray;
+    margin: 8px 0;
+    display: block;
 
-    a{
+    a {
         color: $orange;
     }
 }
 
-.verify{
+.verify {
     display: flex;
     margin: 20px 0;
 
-    .verify-img{
+    .form-group{
+        padding: 0;
+    }
+
+    .verify-img {
         padding: 0 16px;
+    }
+
+    .qrcode-img{
+        width: 100px;
+        max-width: 100px;
+    }
+
+    .make-qrcode{
+        margin: auto 0;
+        margin-left: 20px;
+
+        .btns{
+            display: block;
+            margin: 8px 0;
+        }
+
+        span{
+            color: $middle-gray;
+        }
     }
 }
 
-.login-bottom{
-    a{
+.login-btn {
+    a {
         display: block;
     }
 
-    span{
-        display: block;
-        margin-top: 16px;
-        color: $middle-gray;
+}
+
+.login-ip {
+    display: block;
+    margin-top: 16px;
+    color: $middle-gray;
+    font-size: 14px;
+}
+
+.carousel-block {
+    position: relative;
+
+    .big-title {
+        position: absolute;
+        bottom: 15%;
+        color: $white;
+        padding: 50px;
+        font-size: 50px;
+    }
+}
+
+.owl-theme .owl-dots .owl-dot span {
+    width: 50px;
+    height: 3px;
+    background-color: rgba($color: $white, $alpha:0.3);
+}
+
+.owl-theme .owl-dots .owl-dot.active span,
+.owl-theme .owl-dots .owl-dot:hover span {
+    background: $white;
+}
+
+.owl-theme .owl-nav.disabled+.owl-dots {
+    margin-top: -25px;
+    z-index: 10;
+    position: relative;
+
+}
+
+//代檢系統
+.side-nav{
+    background-color: $white;
+    flex: 1 0 18%;
+
+    .side-each{
+        padding: 8px 16px;
         font-size: 14px;
+        cursor: pointer;
+    }
+}
+
+.inspect-content{
+    flex: 1 0 82%;
+    
+
+    .inspect-container{
+        width: 95%;
+        margin: 0 auto;
+    }
+
+    .inspect-btn{
+        margin: 16px 0;
     }
 }

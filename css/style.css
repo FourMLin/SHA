@@ -780,9 +780,20 @@ header.page-head {
   min-height: 133px;
 }
 
-main {
+header.dark-mod {
+  background-color: #393939;
+  color: #ffffff;
+}
+
+main.business {
   padding: 20px 0 50px;
   min-height: calc(100vh - 133px);
+}
+
+main.inspect-mod {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 footer {
@@ -809,6 +820,7 @@ footer.gray {
 .btns {
   padding: 8px 16px;
   text-align: center;
+  display: inline-block;
 }
 
 .btns .text {
@@ -1187,29 +1199,6 @@ select.input-style:focus {
   border-bottom: 1px solid #FF5E15;
 }
 
-input.input-style.succes,
-select.input-style.succes {
-  border: 1px solid #0072EC;
-}
-
-input.error,
-select.error {
-  border: 1px solid #DA1E28;
-}
-
-input.error.icon,
-select.error.icon {
-  content: "";
-  background: url(../img/online/message-alert.svg) center no-repeat;
-  position: absolute;
-  right: 8px;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  width: 16px;
-  height: 16px;
-}
-
 input:focus,
 select:focus {
   border: 1px solid #FF5E15;
@@ -1301,6 +1290,49 @@ select:focus {
 .form-col .form-group .input-radio label {
   padding-right: 32px;
   cursor: pointer;
+}
+
+.form-group.error .input-style {
+  border: 1px solid #DA1E28;
+}
+
+.form-group.error .icon {
+  position: relative;
+}
+
+.form-group.error .icon::after {
+  content: "";
+  background: url(../img/online/message-alert.svg) center no-repeat;
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+}
+
+.form-group.succes .input-style {
+  border: 1px solid #0072EC;
+}
+
+.form-group.prefix {
+  position: relative;
+}
+
+.form-group.prefix input {
+  padding-left: 80px;
+}
+
+.form-group.prefix::before {
+  content: attr(data-prefix);
+  position: absolute;
+  top: 50%;
+  left: 8px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  z-index: 5;
+  color: #757575;
 }
 
 .table-part {
@@ -1488,6 +1520,7 @@ select:focus {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-top: 35px;
 }
 
 .operate-part .o-block {
@@ -1610,6 +1643,8 @@ select:focus {
 .forgot-p {
   font-size: 14px;
   color: #757575;
+  margin: 8px 0;
+  display: block;
 }
 
 .forgot-p a {
@@ -1623,17 +1658,97 @@ select:focus {
   margin: 20px 0;
 }
 
+.verify .form-group {
+  padding: 0;
+}
+
 .verify .verify-img {
   padding: 0 16px;
 }
 
-.login-bottom a {
+.verify .qrcode-img {
+  width: 100px;
+  max-width: 100px;
+}
+
+.verify .make-qrcode {
+  margin: auto 0;
+  margin-left: 20px;
+}
+
+.verify .make-qrcode .btns {
+  display: block;
+  margin: 8px 0;
+}
+
+.verify .make-qrcode span {
+  color: #757575;
+}
+
+.login-btn a {
   display: block;
 }
 
-.login-bottom span {
+.login-ip {
   display: block;
   margin-top: 16px;
   color: #757575;
   font-size: 14px;
+}
+
+.carousel-block {
+  position: relative;
+}
+
+.carousel-block .big-title {
+  position: absolute;
+  bottom: 15%;
+  color: #ffffff;
+  padding: 50px;
+  font-size: 50px;
+}
+
+.owl-theme .owl-dots .owl-dot span {
+  width: 50px;
+  height: 3px;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.owl-theme .owl-dots .owl-dot.active span,
+.owl-theme .owl-dots .owl-dot:hover span {
+  background: #ffffff;
+}
+
+.owl-theme .owl-nav.disabled + .owl-dots {
+  margin-top: -25px;
+  z-index: 10;
+  position: relative;
+}
+
+.side-nav {
+  background-color: #ffffff;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 18%;
+          flex: 1 0 18%;
+}
+
+.side-nav .side-each {
+  padding: 8px 16px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.inspect-content {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 82%;
+          flex: 1 0 82%;
+}
+
+.inspect-content .inspect-container {
+  width: 95%;
+  margin: 0 auto;
+}
+
+.inspect-content .inspect-btn {
+  margin: 16px 0;
 }
