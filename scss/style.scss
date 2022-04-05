@@ -156,7 +156,7 @@ table {
 }
 
 body {
-    font-size: 16px;
+    font-size: 14px;
     height: 100%;
     overflow-y: auto;
     overflow-x: hidden;
@@ -164,28 +164,38 @@ body {
     position: relative;
     font-family: 'Microsoft JhengHei', Arial, Helvetica, sans-serif;
 
-    &::before {
-        content: "";
-        background: url(../img/online/loginbg-left.png) left bottom no-repeat;
-        background-size: 25%;
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        z-index: -1;
+    &.basic{
+
+        &::before {
+            content: "";
+            background: url(../img/online/loginbg-left.png) left bottom no-repeat;
+            background-size: 25%;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            z-index: -1;
+        }
+    
+        &::after {
+            content: "";
+            background: url(../img/online/loginbg-right.png) right bottom no-repeat;
+            background-size: 25%;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            z-index: -1;
+        }
+
     }
 
-    &::after {
-        content: "";
-        background: url(../img/online/loginbg-right.png) right bottom no-repeat;
-        background-size: 25%;
+    &.inspect-body{
+        background: url(../img/referring/inspect-bg.png) $white-gray right bottom no-repeat;
         width: 100%;
         height: 100%;
-        position: absolute;
-        bottom: 0;
-        right: 0;
-        z-index: -1;
     }
 
 
@@ -215,12 +225,14 @@ header {
     }
 
     &.dark-mod {
+        background-color: $deep-gray;
         color: $white;
         height: 58px;
         position: relative;
 
         .container-full {
             background-color: $deep-gray;
+            height: 58px;
             position: fixed;
             top: 0;
             left: 0;
@@ -268,6 +280,10 @@ footer {
 
 .d-block {
     display: block;
+}
+
+.d-flex {
+    display: flex;
 }
 
 .btns {
@@ -645,11 +661,19 @@ input {
     }
 
     &[type="checkbox"] {
-        width: 20px;
-        height: 20px;
+        width: 15px;
+        height: 15px;
         border: 1px solid $deep-gray;
         border-radius: 4px;
 
+    }
+
+    &[type="checkbox"]:checked{
+        border: 1px solid $orange;
+        background-color: $orange;
+        background-image: url(../img/check-solid.svg);
+        background-position: center;
+        background-repeat: no-repeat;
     }
 }
 
@@ -692,16 +716,28 @@ select {
 .form-title {
     padding: 16px;
     background-color: $light-gray;
-    display: flex;
+
+    .flex-block{
+        display: flex;
+
+        .text{
+            flex: auto;
+        }
+    }
 
     .text{
-        flex: auto;
+        font-size: 14px;
 
         span {
             color: $red;
         }
 
     }
+
+    .text-block{
+        margin-bottom: 16px
+    }
+
 
     .form-title-btn{
         background-color: $deep-gray;
@@ -738,7 +774,7 @@ select {
 
     .form-name {
         background-color: $light-blue;
-        padding: 20px 12px;
+        padding: 16px 12px;
         margin-left: -1rem;
         display: flex;
         font-weight: bold;
@@ -775,7 +811,7 @@ select {
 
         .w-50 {
             width: 60%;
-            max-width: 60%;
+            max-width: fit-content;
         }
 
         .input-hint {
@@ -851,14 +887,29 @@ select {
 
 }
 
-
-
 .table-part {
     margin-top: 50px;
 }
 
 .table-wrap {
-    box-shadow: 0 3px 10px rgba($color: $black, $alpha:0.2);
+    box-shadow: 0 5px 10px rgba($color: $black, $alpha:0.2);
+    overflow: auto;
+}
+
+.block-title{
+    margin-top: 20px;
+
+    h4{
+        margin-bottom: 20px;
+    }
+}
+
+.action-block-wrap{
+    display: flex;
+
+    .warning-message{
+        margin-left: 16px;
+    }
 }
 
 .action-block {
@@ -868,7 +919,6 @@ select {
     display: inline-flex;
     min-width: 176px;
     cursor: pointer;
-    margin-top: 20px;
 
     &:hover {
         background-color: $orange;
@@ -887,6 +937,7 @@ select {
     .text {
         margin: auto 0;
     }
+
 }
 
 .check-apply {
@@ -941,6 +992,7 @@ select {
 .data-count {
     background-color: $white-gray;
     display: flex;
+    box-shadow: 0 3px 10px rgba($color: $black, $alpha:0.2);
 }
 
 .count {
@@ -1019,6 +1071,10 @@ select {
         width: 20px;
         margin: auto 0;
         margin-right: 8px;
+    }
+
+    h4{
+        margin: auto 0;
     }
 }
 

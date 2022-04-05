@@ -77,7 +77,7 @@
                 <div class="page-title">
                     <h3>一般檢查申請作業</h3>
                     <div class="page-title-btns">
-                        <a href="InspectAdd.html" class="btns btn-blue">
+                        <a href="InspectAdd.html" class="btns btn-black-blue">
                             <div class="text">新增</div>
                         </a>
                         <a href="InspectEdit.html" class="btns btn-black-blue">
@@ -86,55 +86,81 @@
                         <a href="InspectDelet.html" class="btns btn-black-blue">
                             <div class="text">刪除</div>
                         </a>
-                        <a href="InspectSearch.html" class="btns btn-black-blue">
+                        <a href="InspectSearch.html" class="btns btn-blue">
                             <div class="text">查詢</div>
                         </a>
                     </div>
                 </div>
                 
                 <div class="block-title">
-                    <h4>選取事業單位</h4>
+                    <h4>查詢</h4>
                 </div>
                 <form class="form-wrap">
-                    <div class="form-title">
-                        <div class="flex-block">
-                            <div class="text">
-                                "<span>＊</span>" 標記者為必須填寫的欄位。
-                            </div>
-                            <div class="form-title-btn">
-                                <a href="InspectAddDetail.html" class="d-flex">
-                                    <div class="text">一般檢查申請明細管理</div>
-                                    <div class="icon">
-                                        <img src="../img/referring/check-icon.svg" alt="">
-                                     </div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
                     <div class="form-body">
                         <div class="form-col col-sm-12 col-md-12">
-                            <div class="form-name"><span>申請單號</span></div>
+                            <div class="form-name"><span>事業單位統一編號</span></div>
                             <div class="form-group">
-                                <p>1059002402</p>
+                                <input class="input-style" type="text">
                             </div>
                         </div>
                         <div class="form-col col-sm-12 col-md-12">
-                            <div class="form-name require"><span>申請日期</span></div>
+                            <div class="form-name"><span>事業單位名稱</span></div>
                             <div class="form-group">
+                                <input class="input-style" type="text">
+                            </div>
+                        </div>
+                        <div class="form-col col-sm-12 col-md-6">
+                            <div class="form-name"><span>申請單號</span></div>
+                            <div class="form-group">
+                                <input class="input-style" type="text">
+                            </div>
+                        </div>
+                        <div class="form-col col-sm-12 col-md-6">
+                            <div class="form-name"><span>申請文號</span></div>
+                            <div class="form-group">
+                                <input class="input-style" type="text">
+                            </div>
+                        </div>
+                        <div class="form-col col-sm-12 col-md-6">
+                            <div class="form-name"><span>申請日期</span></div>
+                            <div class="form-group">
+                                <input class="input-style" type="date">
+                                <p>至</p>
                                 <input class="input-style" type="date">
                                 <div class="input-hint w-50">(例：0980101)</div>
                             </div>
                         </div>
-                        <div class="form-col col-sm-12 col-md-12">
-                            <div class="form-name require"><span>申請項目</span></div>
+                        <div class="form-col col-sm-12 col-md-6">
+                            <div class="form-name"><span>設備代碼</span></div>
                             <div class="form-group">
-                                <select class="input-style">
-                                    <option value="0">請選擇</option>
-                                </select>
+                                <input class="input-style" type="text">
                             </div>
                         </div>
                         <div class="form-col col-sm-12 col-md-12">
-                            <div class="form-name require"><span>收件類別</span></div>
+                            <div class="form-name"><span>收費日期</span></div>
+                            <div class="form-group">
+                                <input class="input-style" type="date">
+                                <p>至</p>
+                                <input class="input-style" type="date">
+                                <div class="input-hint w-50">(例：0980101)</div>
+                            </div>
+                        </div>
+                        <div class="form-col col-sm-12 col-md-6">
+                            <div class="form-name"><span>申請項目</span></div>
+                            <div class="form-group">
+                                <select class="input-style">
+                                    <option value="0">全部</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-col col-sm-12 col-md-6">
+                            <div class="form-name"><span>刻印號碼</span></div>
+                            <div class="form-group">
+                                <input class="input-style" type="text">
+                            </div>
+                        </div>
+                        <div class="form-col col-sm-12 col-md-6">
+                            <div class="form-name"><span>機械或設備</span></div>
                             <div class="form-group">
                                 <div class="input-radio">
                                     <input type="radio" id="device" name="dm" value="device" checked>
@@ -144,104 +170,39 @@
                                     <input type="radio" id="machine" name="dm" value="machine">
                                     <label for="machine">機械</label>
                                 </div>
+                                <div class="input-radio">
+                                    <input type="radio" id="all" name="dm" value="all">
+                                    <label for="all">全部</label>
+                                </div>
                             </div>
                         </div>
                         <div class="form-col col-sm-12 col-md-6">
-                            <div class="form-name require"><span>事業單位檔號</span></div>
+                            <div class="form-name"><span>銷帳編號</span></div>
                             <div class="form-group">
                                 <input class="input-style" type="text">
-                                <a href="InspectAddChoose.html" class="input-hint w-50 d-block btns btn-black-blue" style="font-size: 14px;">
-                                    <div class="text">選取事業單位</div>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="form-col col-sm-12 col-md-6">
-                            <div class="form-name"><span>統一編號</span></div>
-                            <div class="form-group">
-                                <p>1059002402</p>
-                            </div>
-                        </div>
-                        <div class="form-col col-sm-12 col-md-12">
-                            <div class="form-name"><span>事業單位名稱</span></div>
-                            <div class="form-group">
-                                <p></p>
-                            </div>
-                        </div>
-                        <div class="form-col col-sm-12 col-md-12">
-                            <div class="form-name"><span>通訊地址</span></div>
-                            <div class="form-group">
-                                <p></p>
-                            </div>
-                        </div>
-                        <div class="form-col col-sm-12 col-md-6">
-                            <div class="form-name"><span>公司電話</span></div>
-                            <div class="form-group">
-                                <p></p>
-                            </div>
-                        </div>
-                        <div class="form-col col-sm-12 col-md-6">
-                            <div class="form-name"><span>聯絡人</span></div>
-                            <div class="form-group">
-                                <p></p>
-                            </div>
-                        </div>
-                        <div class="form-col col-sm-12 col-md-12">
-                            <div class="form-name require"><span>申請檢查態樣</span></div>
-                            <div class="form-group">
-                                <select class="input-style">
-                                    <option value="0">請選擇</option>
-                                </select>
                             </div>
                         </div>
                         <div class="form-col col-sm-12 col-md-12">
                             <div class="form-name"><span>檢查機構</span></div>
                             <div class="form-group">
-                                <p>勞動部職業安全衛生署</p>
-                            </div>
-                        </div>
-                        <div class="form-col col-sm-12 col-md-12">
-                            <div class="form-name"><span>承辦人員</span></div>
-                            <div class="form-group">
                                 <select class="input-style">
-                                    <option value="0">請選擇</option>
+                                    <option value="0">(000)勞動部職業安全衛生署</option>
                                 </select>
                             </div>
                         </div>
-                        <div class="form-col col-sm-12 col-md-6">
-                            <div class="form-name"><span>建檔人員</span></div>
+                        <div class="form-col col-sm-12 col-md-12">
+                            <div class="form-name"><span>廠商自訂工號</span></div>
                             <div class="form-group">
-                                <p>(勞動部職業安全衛生署)維護廠商</p>
-                            </div>
-                        </div>
-                        <div class="form-col col-sm-12 col-md-6">
-                            <div class="form-name"><span>建檔日期</span></div>
-                            <div class="form-group">
-                                <p>1110224</p>
-                            </div>
-                        </div>
-                        <div class="form-col col-sm-12 col-md-6">
-                            <div class="form-name"><span>修改人員</span></div>
-                            <div class="form-group">
-                                <p></p>
-                            </div>
-                        </div>
-                        <div class="form-col col-sm-12 col-md-6">
-                            <div class="form-name"><span>最後修改日期</span></div>
-                            <div class="form-group">
-                                <p></p>
+                                <input class="input-style" type="text">
                             </div>
                         </div>
 
-                        
                     </div>
                 </form>
 
                 <div class="form-end-btns">
-                    <a href="InspectAdd.html" class="btns btn-blue">
-                        <div class="text">新增</div>
-                    </a>
-                    <a href="InspectEdit.html" class="btns btn-black-blue">
-                        <div class="text">修改</div>
+                    <a href="InspectEditSearch.html" class="btns btn-blue">
+                        <div class="text">查詢</div>
                     </a>
                 </div>
             </div>
