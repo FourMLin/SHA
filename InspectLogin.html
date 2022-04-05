@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>危險性機械及設備檢查資訊管理系統－事業單位檢查申請</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="inspect-login">
+    <header class="dark-mod">
+        <div class="container">
+            <div class="top-nav">
+                <div class="sha-logo">
+                    <img src="img/online/logo1.png" alt="">
+                </div>
+                <div class="sha-text">
+                    <span>勞動部職業安全衛生署</span>
+                    <p class="bold">危險性機械及設備檢查資訊管理系統－事業單位檢查申請</p>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="inspect-mod">
+        <div class="inspect-login-img"></div>
+        <div class="inspect-operate">
+            <div class="inspect-operate-inner">
+                <div class="inspect-operate-title">
+                    <h1>系統登入</h1>
+                </div>
+                <form>
+                    <div class="form-top">
+                        <div class="form-name"><span>所屬單位：</span></div>
+                        <div class="form-group">
+                            <input class="input-style" type="text">
+                        </div>
+                    </div>
+                    <div class="form-top">
+                        <div class="form-name"><span>系統帳號：</span></div>
+                        <div class="form-group">
+                            <input class="input-style" type="text">
+                        </div>
+                    </div>
+                    <div class="form-top">
+                        <div class="form-name"><span>系統密碼：</span></div>
+                        <div class="form-group">
+                            <input class="input-style" type="text">
+                        </div>
+                    </div>
+                    <div class="verify form-top">
+                        <div class="form-group">
+                            <!-- <div class="form-name"><span>驗證碼：</span></div> -->
+                            <input class="input-style" type="text" placeholder="驗證碼">
+                        </div>
+                        <div class="verify-img">
+                            <img src="img/online/verify.png" alt="">
+                        </div>
+                        <a href="#" class="btns btn-outline-blue">
+                            <div class="text">查詢</div>
+                        </a>
+                    </div>
+                    <div class="login-btn">
+                        <a href="page/InspectAdd.html" class="btns btn-blue col-md-4">
+                            <div class="text">登入</div>
+                        </a>
+                    </div>
+
+                    <div class="login-btn-option">
+                        <a href="#" class="btns btn-outline-blue">
+                            <div class="text">自然人憑證登入</div>
+                        </a>
+                        <span>本系統支援自然人憑證登入您可點選提交鍵使用</span>
+                    </div>
+                </form>
+
+                <div class="notice">
+                    <h3>注意事項：</h3>
+                    <ul class="notice-list">
+                        <li>忘記登入帳號密碼，請按<a href="#">忘記密碼</a>。</li>
+                        <li>提醒閒置超過20分鐘，系統自動排除使用者，請重新登入帳號密碼。</li>
+                        <li>本網站網址採用SSL加密機制，可保護貴單位所提供資料的傳輸安全，敬請放心填報。</li>
+                    </ul>
+                </div>
+            </div>
+            
+
+            <footer class="light-gray">
+                <div class="container">
+                    <p>@ 系統版本：2022 Optimize Version 危險性機械及設備檢查資訊管理系統 建議使用1024 x 768 <br> 以上瀏覽本站以獲取最佳瀏覽效果。</p>
+                </div>
+            </footer>
+        </div>
+        
+        
+
+    </main>
+
+    
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".owl-carousel").owlCarousel({
+                loop: true,
+                margin: 10,
+                nav: false,
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    600: {
+                        items: 1
+                    },
+                    1000: {
+                        items: 1
+                    }
+                }
+            });
+        });
+
+        $('.content-each').hide();
+        $('.content-each:first').show();
+
+        $('.list-each').click(function () {
+            $(this).addClass('active').siblings().removeClass('active');
+            $('.content-each').hide()
+
+            var activeTab = $(this).find('a').attr('href');
+            $(activeTab).fadeIn();
+            return false;
+        });
+    </script>
+</body>
+
+</html>
