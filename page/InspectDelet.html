@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>危險性機械及設備檢查資訊管理系統－事業單位檢查申請</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/style.css.map">
+
+</head>
+
+<body class="inspect-body">
+    <header class="dark-mod">
+        <div class="container-full">
+            <div class="top-nav">
+                <div class="sha-logo">
+                    <img src="../img/online/logo1.png" alt="">
+                </div>
+                <div class="sha-text">
+                    <span>勞動部職業安全衛生署</span>
+                    <p class="bold">危險性機械及設備檢查資訊管理系統－事業單位檢查申請</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main id="sideNav" class="inspect-mod">
+        <div class="side-nav-wrap">
+            <div class="side-nav">
+                <div class="side-each">
+                    <div class="side-main">登出系統</div>
+                </div>
+                <div class="side-each">
+                    <div class="side-main">最新公告</div>
+                </div>
+                <div class="side-each">
+                    <div class="side-main">客服專線</div>
+                </div>
+                <div class="side-each">
+                    <div class="side-main">問題反應</div>
+                </div>
+                <div class="side-each">
+                    <div class="side-main">修改登錄密碼及基本資料</div>
+                </div>
+                <div class="side-each">
+                    <div class="side-main">文件庫</div>
+                </div>
+                <div class="side-each">
+                    <div class="side-main">危險性機械及設備檢查資訊管理系統</div>
+                    <div class="side-list nav-toggle" v-for="(nav, i) in slide" :key="i">
+                        <div class="side-list-title">
+                            <div class="title-icon">
+                                <img :src="nav.icon" alt="">
+                            </div>
+                            <div class="text">{{nav.main}}</div>
+                            <div class="icon">
+                                <img src="../img/angle-down-solid.svg" alt="">
+                            </div>
+                        </div>
+                        <ul class="slide-down-inner" v-for="sub in nav.subs" :key="sub">
+                            <li class="side-subs">
+                                <div class="text">{{sub}}</div>
+                            </li>
+                        </ul>
+                    </div>
+    
+                </div>
+    
+            </div>
+        </div>
+        
+
+        <div class="inspect-content">
+            <div class="inspect-container">
+                <div class="page-title">
+                    <h3>一般檢查申請作業</h3>
+                    <div class="page-title-btns">
+                        <a href="InspectAdd.html" class="btns btn-black-blue">
+                            <div class="text">新增</div>
+                        </a>
+                        <a href="InspectEdit.html" class="btns btn-black-blue">
+                            <div class="text">修改</div>
+                        </a>
+                        <a href="InspectDelet.html" class="btns btn-blue">
+                            <div class="text">刪除</div>
+                        </a>
+                        <a href="InspectSearch.html" class="btns btn-black-blue">
+                            <div class="text">查詢</div>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="block-title">
+                    <h4>刪除</h4>
+                </div>
+                <form class="form-wrap">
+                    <div class="form-body">
+                        <div class="form-col col-sm-12 col-md-12">
+                            <div class="form-name"><span>事業單位統一編號</span></div>
+                            <div class="form-group">
+                                <input class="input-style" type="text">
+                            </div>
+                        </div>
+                        <div class="form-col col-sm-12 col-md-12">
+                            <div class="form-name"><span>事業單位名稱</span></div>
+                            <div class="form-group">
+                                <input class="input-style" type="text">
+                            </div>
+                        </div>
+                        <div class="form-col col-sm-12 col-md-6">
+                            <div class="form-name"><span>申請單號</span></div>
+                            <div class="form-group">
+                                <input class="input-style" type="text">
+                            </div>
+                        </div>
+                        <div class="form-col col-sm-12 col-md-6">
+                            <div class="form-name"><span>申請文號</span></div>
+                            <div class="form-group">
+                                <input class="input-style" type="text">
+                            </div>
+                        </div>
+                        <div class="form-col col-sm-12 col-md-6">
+                            <div class="form-name"><span>申請日期</span></div>
+                            <div class="form-group">
+                                <input class="input-style" type="date">
+                                <p>至</p>
+                                <input class="input-style" type="date">
+                                <div class="input-hint w-50">(例：0980101)</div>
+                            </div>
+                        </div>
+                        <div class="form-col col-sm-12 col-md-6">
+                            <div class="form-name"><span>設備代碼</span></div>
+                            <div class="form-group">
+                                <input class="input-style" type="text">
+                            </div>
+                        </div>
+                        <div class="form-col col-sm-12 col-md-12">
+                            <div class="form-name"><span>收費日期</span></div>
+                            <div class="form-group">
+                                <input class="input-style" type="date">
+                                <p>至</p>
+                                <input class="input-style" type="date">
+                                <div class="input-hint w-50">(例：0980101)</div>
+                            </div>
+                        </div>
+                        <div class="form-col col-sm-12 col-md-6">
+                            <div class="form-name"><span>申請項目</span></div>
+                            <div class="form-group">
+                                <select class="input-style">
+                                    <option value="0">全部</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-col col-sm-12 col-md-6">
+                            <div class="form-name"><span>刻印號碼</span></div>
+                            <div class="form-group">
+                                <input class="input-style" type="text">
+                            </div>
+                        </div>
+                        <div class="form-col col-sm-12 col-md-6">
+                            <div class="form-name"><span>機械或設備</span></div>
+                            <div class="form-group">
+                                <div class="input-radio">
+                                    <input type="radio" id="device" name="dm" value="device" checked>
+                                    <label for="device">設備</label>
+                                </div>
+                                <div class="input-radio">
+                                    <input type="radio" id="machine" name="dm" value="machine">
+                                    <label for="machine">機械</label>
+                                </div>
+                                <div class="input-radio">
+                                    <input type="radio" id="all" name="dm" value="all">
+                                    <label for="all">全部</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-col col-sm-12 col-md-6">
+                            <div class="form-name"><span>銷帳編號</span></div>
+                            <div class="form-group">
+                                <input class="input-style" type="text">
+                            </div>
+                        </div>
+                        <div class="form-col col-sm-12 col-md-12">
+                            <div class="form-name"><span>檢查機構</span></div>
+                            <div class="form-group">
+                                <select class="input-style">
+                                    <option value="0">(000)勞動部職業安全衛生署</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-col col-sm-12 col-md-12">
+                            <div class="form-name"><span>廠商自訂工號</span></div>
+                            <div class="form-group">
+                                <input class="input-style" type="text">
+                            </div>
+                        </div>
+
+                    </div>
+                </form>
+
+                <div class="form-end-btns">
+                    <a href="InspectEditSearch.html" class="btns btn-blue">
+                        <div class="text">查詢</div>
+                    </a>
+                </div>
+            </div>
+
+            <footer class="light-gray">
+                <div class="container">
+                    <p>@ 系統版本：2022 Optimize Version 危險性機械及設備檢查資訊管理系統　建議使用1024 x 768 以上瀏覽本站以獲取最佳瀏覽效果。</p>
+                </div>
+            </footer>
+        </div>
+
+        
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
+    <script src="../js/sidenave.js"></script>
+    <script>
+        $('.side-list-title').click(function (){
+            $(this).parent('.nav-toggle').toggleClass('is-open');
+        })
+    </script>
+
+
+</body>
+
+</html>
