@@ -1958,12 +1958,12 @@ select:focus {
 
 .side-nav-wrap {
   -webkit-box-flex: 1;
-      -ms-flex: 1 0 15%;
-          flex: 1 0 15%;
+      -ms-flex: 1 0 18%;
+          flex: 1 0 18%;
 }
 
 .side-nav {
-  max-width: 15%;
+  max-width: 18%;
   background-color: #ffffff;
   position: fixed;
   top: 58px;
@@ -2050,8 +2050,8 @@ select:focus {
 
 .inspect-content {
   -webkit-box-flex: 1;
-      -ms-flex: 1 0 85%;
-          flex: 1 0 85%;
+      -ms-flex: 1 0 82%;
+          flex: 1 0 82%;
 }
 
 .inspect-content .inspect-container {
