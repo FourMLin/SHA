@@ -212,7 +212,6 @@ header {
 
     &.page-head {
         background-color: $white;
-        min-height: 133px;
     }
 
     &.dark-mod {
@@ -235,7 +234,7 @@ main {
 
     &.business {
         padding: 20px 0 50px;
-        min-height: calc(100vh - 133px);
+        min-height: 95vh;
     }
 
     &.inspect-mod {

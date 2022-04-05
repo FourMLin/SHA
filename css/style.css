@@ -778,7 +778,6 @@ body::after {
 
 header.page-head {
   background-color: #ffffff;
-  min-height: 133px;
 }
 
 header.dark-mod {
@@ -798,7 +797,7 @@ header.dark-mod .container-full {
 
 main.business {
   padding: 20px 0 50px;
-  min-height: calc(100vh - 133px);
+  min-height: 95vh;
 }
 
 main.inspect-mod {
