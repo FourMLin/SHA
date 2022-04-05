@@ -3,11 +3,11 @@ body{
     font-family: 'Segoe UI';
     text-align: left;
     vertical-align: baseline;
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
     border: 0;
-    width: 100%;
-    height: 100%;
+    max-width: 1920px;
+    max-height: 1080px;
 }
 
 img{
@@ -77,30 +77,33 @@ img{
 
 .hr2{
     margin-top: 12.8%;
-    margin-left: 11.8%;
+    margin-left: 10.8%;
     width: 78.5%;
     height: 1px;
 }
 
 .lglabel{
-    font-size: 15px;
+    font-size: 13.5px;
     padding-top: 3.1%;
-    padding-left: 11.8%;
+    padding-left: 10.8%;
     padding-bottom: 0.9%;
 }
 
 .lginput{
-    margin-left: 11.8%;
+    margin-left: 10.8%;
+    padding-left: 5px;
     width: 78.5%;
-    height: 15%;
+    height: 20%;
     background-color: #F4F4F4;
     border-style: none;
     border-bottom: 1px solid;
     outline-color: #0F62FE;
+    letter-spacing: normal;
 }
 
 .vercode{
-    margin-left: 11.8%;
+    margin-left: 10.8%;
+    padding-left: 5px;
     width: 26.2%;
     height: 10%;
     background-color: #F4F4F4;
@@ -137,8 +140,8 @@ img{
     justify-content: center;
     align-items: center;
     text-decoration: none;
-    margin-left: 11.8%;
-    margin-top: 2rem;
+    margin-left: 10.8%;
+    margin-top: 3.1%;
     width: 129px;
     height: 40px;
     border: 1px solid #0F62FE;
@@ -152,7 +155,7 @@ img{
     justify-content: center;
     align-items: center;
     text-decoration: none;
-    margin-left: 11.8%;
+    margin-left: 10.8%;
     margin-top: 2rem;
     width: 129px;
     height: 40px;
@@ -168,31 +171,27 @@ img{
     font-size: 14px;
 }
 
-.atten{
-    font-family: 'Noto Sans CJK TC DemiLight';
-}
-
 .textatten{
-    font-size: 24px;
+    font-size: 20px;
     padding-left: 5.6rem;
     padding-top: 1rem;
 }
 
 .atten-inner{
-    font-size: 14px;
+    font-size: 12px;
     padding-left: 5.6rem;
     line-height: 21px;
 }
 
 .atten-item{
-    font-size: 14px;
+    font-size: 12px;
     color: #000000;
     text-indent: 0rem;
 }
 
 .atten-btn{
+    font-size: 12px;
     color: #2B74FE;
-    font-size: 14px;
 }
 
 .btmcube{
@@ -203,7 +202,6 @@ img{
 }
 
 .textbtm{
-    font-family: 'Noto Sans CJK TC DemiLight';
     font-size: 13px;
     text-align: center;
     line-height: 22px;
