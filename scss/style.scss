@@ -373,11 +373,17 @@ footer {
     }
 
     .sha-text {
+        flex: auto;
 
         span {
             font-size: 14px;
         }
 
+    }
+
+    .sha-ips{
+        font-size: 12px;
+        margin: auto 0;
     }
 
 }
@@ -920,6 +926,8 @@ select {
 .table-wrap {
     box-shadow: 0 5px 10px rgba($color: $black, $alpha:0.2);
     overflow: auto;
+    width: 1280px;
+    max-width: 100%;
 }
 
 .block-title{
@@ -948,6 +956,13 @@ select {
 
     &:hover {
         background-color: $orange;
+    }
+
+    &.inspect-mod{
+
+        &:hover {
+            background-color: $blue;
+        }
     }
 
     .icon {
@@ -1346,6 +1361,21 @@ select {
     }
 }
 
+.inspect-operate-title{
+    position: relative;
+
+    &::after{
+        content: "";
+        position: absolute;
+        top: calc(100% + 8px);
+        left: 0;
+        width: 100px;
+        height: 4px;
+        background-color: $blue;
+
+    }
+}
+
 .notice{
     border-top: 1px solid $light-gray;
     padding: 20px 0;
@@ -1425,11 +1455,28 @@ select {
 
 .side-main {
     padding: 8px 16px;
+    display: flex;
+    margin: auto 0;
 
     &:hover {
         background-color: rgba($color: $red, $alpha:0.1);
         color: $red;
 
+        .side-main-icon{
+            svg{
+                fill: $red;
+            }
+        }
+
+    }
+
+}
+
+.side-main-icon{
+    margin-left: 8px;
+
+    svg{
+        width: 18px;
     }
 
 }

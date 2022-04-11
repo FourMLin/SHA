@@ -22,6 +22,7 @@
                     <span>勞動部職業安全衛生署</span>
                     <p class="bold">危險性機械及設備檢查資訊管理系統－事業單位檢查申請</p>
                 </div>
+                <div class="sha-ips">目前使用者：維護廠商｜上次登入：1110221 17 : 59</div>
             </div>
         </div>
     </header>
@@ -30,26 +31,49 @@
         <div class="side-nav-wrap">
             <div class="side-nav">
                 <div class="side-each">
-                    <div class="side-main">登出系統</div>
+                    <a href="../InspectLogin.html">
+                        <div class="side-main">登出系統
+                            <div class="side-main-icon">
+                                <svg viewBox="0 0 24 24">
+                                    <path d="M0,0H24V24H0Z" fill="none" />
+                                    <path
+                                        d="M5,5h6a1,1,0,0,0,1-1h0a1,1,0,0,0-1-1H5A2.006,2.006,0,0,0,3,5V19a2.006,2.006,0,0,0,2,2h6a1,1,0,0,0,1-1h0a1,1,0,0,0-1-1H5Z" />
+                                    <path
+                                        d="M20.65,11.65,17.86,8.86a.5.5,0,0,0-.86.35V11H10a1,1,0,0,0-1,1H9a1,1,0,0,0,1,1h7v1.79a.5.5,0,0,0,.85.35l2.79-2.79A.492.492,0,0,0,20.65,11.65Z" />
+                                </svg>
+                            </div>
+                        </div>
+                    </a>
                 </div>
                 <div class="side-each">
-                    <div class="side-main">最新公告</div>
+                    <a href="InspectNotify.html">
+                        <div class="side-main">最新公告</div>
+                    </a>
                 </div>
                 <div class="side-each">
-                    <div class="side-main">客服專線</div>
+                    <a href="#">
+                        <div class="side-main">客服專線</div>
+                    </a>
                 </div>
                 <div class="side-each">
-                    <div class="side-main">問題反應</div>
+                    <a href="#">
+                        <div class="side-main">問題反應</div>
+                    </a>
                 </div>
                 <div class="side-each">
-                    <div class="side-main">修改登錄密碼及基本資料</div>
+                    <a href="#">
+                        <div class="side-main">修改登錄密碼及基本資料</div>
+                    </a>
                 </div>
                 <div class="side-each">
-                    <div class="side-main">文件庫</div>
+                    <a href="#">
+                        <div class="side-main">文件庫</div>
+                    </a>
                 </div>
                 <div class="side-each">
                     <div class="side-main">危險性機械及設備檢查資訊管理系統</div>
-                    <div class="side-list nav-toggle" v-for="(nav, i) in slide" :key="i">
+                    <div class="side-list nav-toggle" v-for="(nav, i) in slide" :key="i"
+                        :class="[{ 'is-open': i === 0 }]">
                         <div class="side-list-title">
                             <div class="title-icon">
                                 <img :src="nav.icon" alt="">
@@ -59,18 +83,20 @@
                                 <img src="../img/angle-down-solid.svg" alt="">
                             </div>
                         </div>
-                        <ul class="slide-down-inner" v-for="sub in nav.subs" :key="sub">
+                        <ul class="slide-down-inner" v-for="(sub, i) in nav.subs" :key="i">
                             <li class="side-subs">
-                                <div class="text">{{sub}}</div>
+                                <a href="InspectAdd.html"><a href="InspectAdd.html">
+                                        <div class="text">{{sub}}</div>
+                                    </a></a>
                             </li>
                         </ul>
                     </div>
-    
+
                 </div>
-    
+
             </div>
         </div>
-        
+
 
         <div class="inspect-content">
             <div class="inspect-container">
@@ -91,9 +117,9 @@
                         </a>
                     </div>
                 </div>
-                
+
                 <div class="block-title">
-                    <h4>選取事業單位</h4>
+                    <h4>新增</h4>
                 </div>
                 <form class="form-wrap">
                     <div class="form-title">
@@ -106,7 +132,7 @@
                                     <div class="text">一般檢查申請明細管理</div>
                                     <div class="icon">
                                         <img src="../img/referring/check-icon.svg" alt="">
-                                     </div>
+                                    </div>
                                 </a>
                             </div>
                         </div>
@@ -115,7 +141,7 @@
                         <div class="form-col col-sm-12 col-md-12">
                             <div class="form-name"><span>申請單號</span></div>
                             <div class="form-group">
-                                <p>1059002402</p>
+                                <p>系統自動編號</p>
                             </div>
                         </div>
                         <div class="form-col col-sm-12 col-md-12">
@@ -150,7 +176,8 @@
                             <div class="form-name require"><span>事業單位檔號</span></div>
                             <div class="form-group">
                                 <input class="input-style" type="text">
-                                <a href="InspectAddChoose.html" class="input-hint w-50 d-block btns btn-black-blue" style="font-size: 14px;">
+                                <a href="InspectAddChoose.html" class="input-hint w-50 d-block btns btn-black-blue"
+                                    style="font-size: 14px;">
                                     <div class="text">選取事業單位</div>
                                 </a>
                             </div>
@@ -232,7 +259,7 @@
                             </div>
                         </div>
 
-                        
+
                     </div>
                 </form>
 
@@ -253,7 +280,7 @@
             </footer>
         </div>
 
-        
+
     </main>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
@@ -261,7 +288,7 @@
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
     <script src="../js/sidenave.js"></script>
     <script>
-        $('.side-list-title').click(function (){
+        $('.side-list-title').click(function () {
             $(this).parent('.nav-toggle').toggleClass('is-open');
         })
     </script>

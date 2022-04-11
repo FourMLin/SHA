@@ -934,8 +934,19 @@ footer.light-gray {
   margin-right: 12px;
 }
 
+.top-nav .sha-text {
+  -webkit-box-flex: 1;
+      -ms-flex: auto;
+          flex: auto;
+}
+
 .top-nav .sha-text span {
   font-size: 14px;
+}
+
+.top-nav .sha-ips {
+  font-size: 12px;
+  margin: auto 0;
 }
 
 .nav {
@@ -1486,6 +1497,8 @@ select:focus {
   -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
           box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
   overflow: auto;
+  width: 1280px;
+  max-width: 100%;
 }
 
 .block-title {
@@ -1519,6 +1532,10 @@ select:focus {
 
 .action-block:hover {
   background-color: #FF5E15;
+}
+
+.action-block.inspect-mod:hover {
+  background-color: #0072EC;
 }
 
 .action-block .icon {
@@ -1924,6 +1941,20 @@ select:focus {
   margin: 30px 0;
 }
 
+.inspect-operate-title {
+  position: relative;
+}
+
+.inspect-operate-title::after {
+  content: "";
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  width: 100px;
+  height: 4px;
+  background-color: #0072EC;
+}
+
 .notice {
   border-top: 1px solid #e0e0e0;
   padding: 20px 0;
@@ -2005,11 +2036,27 @@ select:focus {
 
 .side-main {
   padding: 8px 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: auto 0;
 }
 
 .side-main:hover {
   background-color: rgba(218, 30, 40, 0.1);
   color: #DA1E28;
+}
+
+.side-main:hover .side-main-icon svg {
+  fill: #DA1E28;
+}
+
+.side-main-icon {
+  margin-left: 8px;
+}
+
+.side-main-icon svg {
+  width: 18px;
 }
 
 .side-subs {

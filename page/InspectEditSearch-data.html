@@ -22,6 +22,7 @@
                     <span>勞動部職業安全衛生署</span>
                     <p class="bold">危險性機械及設備檢查資訊管理系統－事業單位檢查申請</p>
                 </div>
+                <div class="sha-ips">目前使用者：維護廠商｜上次登入：1110221 17 : 59</div>
             </div>
         </div>
     </header>
@@ -30,26 +31,38 @@
         <div class="side-nav-wrap">
             <div class="side-nav">
                 <div class="side-each">
-                    <div class="side-main">登出系統</div>
+                    <a href="../InspectLogin.html">
+                        <div class="side-main">登出系統
+                            <div class="side-main-icon">
+                                <svg viewBox="0 0 24 24">
+                                    <path d="M0,0H24V24H0Z" fill="none" />
+                                    <path
+                                        d="M5,5h6a1,1,0,0,0,1-1h0a1,1,0,0,0-1-1H5A2.006,2.006,0,0,0,3,5V19a2.006,2.006,0,0,0,2,2h6a1,1,0,0,0,1-1h0a1,1,0,0,0-1-1H5Z" />
+                                    <path
+                                        d="M20.65,11.65,17.86,8.86a.5.5,0,0,0-.86.35V11H10a1,1,0,0,0-1,1H9a1,1,0,0,0,1,1h7v1.79a.5.5,0,0,0,.85.35l2.79-2.79A.492.492,0,0,0,20.65,11.65Z" />
+                                </svg>
+                            </div>
+                        </div>
+                    </a>
                 </div>
                 <div class="side-each">
-                    <div class="side-main">最新公告</div>
+                <a href="InspectNotify.html"><div class="side-main">最新公告</div></a>
                 </div>
                 <div class="side-each">
-                    <div class="side-main">客服專線</div>
+                    <a href="#"><div class="side-main">客服專線</div></a>
                 </div>
                 <div class="side-each">
-                    <div class="side-main">問題反應</div>
+                    <a href="#"><div class="side-main">問題反應</div></a>
                 </div>
                 <div class="side-each">
-                    <div class="side-main">修改登錄密碼及基本資料</div>
+                    <a href="#"><div class="side-main">修改登錄密碼及基本資料</div></a>
                 </div>
                 <div class="side-each">
-                    <div class="side-main">文件庫</div>
+                    <a href="#"><div class="side-main">文件庫</div></a>
                 </div>
                 <div class="side-each">
                     <div class="side-main">危險性機械及設備檢查資訊管理系統</div>
-                    <div class="side-list nav-toggle" v-for="(nav, i) in slide" :key="i">
+                    <div class="side-list nav-toggle" v-for="(nav, i) in slide" :key="i" :class="[{ 'is-open': i === 0 }]">
                         <div class="side-list-title">
                             <div class="title-icon">
                                 <img :src="nav.icon" alt="">
@@ -61,7 +74,7 @@
                         </div>
                         <ul class="slide-down-inner" v-for="sub in nav.subs" :key="sub">
                             <li class="side-subs">
-                                <div class="text">{{sub}}</div>
+                                <a href="InspectAdd.html"><div class="text">{{sub}}</div></a>
                             </li>
                         </ul>
                     </div>
@@ -95,7 +108,7 @@
                 <div class="block-title">
                     <h4>修改</h4>
                     <a href="InspectEditSearch.html">
-                        <div class="action-block">
+                        <div class="action-block inspect-mod">
                             <div class="icon">
                                 <svg width="8" viewBox="0 0 256 512"><path fill="#ffffff" d="M192 448c-8.188 0-16.38-3.125-22.62-9.375l-160-160c-12.5-12.5-12.5-32.75 0-45.25l160-160c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25L77.25 256l137.4 137.4c12.5 12.5 12.5 32.75 0 45.25C208.4 444.9 200.2 448 192 448z"/></svg>
                             </div>
@@ -155,7 +168,7 @@
                             </div>
                         </div>
                         <div class="form-col col-sm-12 col-md-6">
-                            <div class="form-name require"><span>事業單位檔號</span></div>
+                            <div class="form-name"><span>事業單位檔號</span></div>
                             <div class="form-group">
                                 <input class="input-style" type="text">
                                 <a href="#" class="input-hint w-50 d-block btns btn-black-blue" style="font-size: 14px;">
@@ -197,7 +210,7 @@
                             </div>
                         </div>
                         <div class="form-col col-sm-12 col-md-12">
-                            <div class="form-name require"><span>申請檢查態樣</span></div>
+                            <div class="form-name"><span>申請檢查態樣</span></div>
                             <div class="form-group">
                                 <select class="input-style">
                                     <option value="0">事業單位或關係企業申請</option>
@@ -219,7 +232,7 @@
                             </div>
                         </div>
                         <div class="form-col col-sm-12 col-md-6">
-                            <div class="form-name"><span>建檔人員</span></div>
+                            <div class="form-name require"><span>建檔人員</span></div>
                             <div class="form-group">
                                 <p>(勞動部職業安全衛生署)維護廠商</p>
                             </div>
@@ -231,7 +244,7 @@
                             </div>
                         </div>
                         <div class="form-col col-sm-12 col-md-6">
-                            <div class="form-name"><span>修改人員</span></div>
+                            <div class="form-name require"><span>修改人員</span></div>
                             <div class="form-group">
                                 <p></p>
                             </div>
