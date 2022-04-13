@@ -2076,6 +2076,12 @@ select:focus {
   padding: 30px 50px;
 }
 
+@media (max-width: 991px) {
+  .inspect-operate .inspect-operate-inner {
+    padding: 16px;
+  }
+}
+
 .inspect-operate .inspect-operate-inner form {
   margin: 30px 0;
 }

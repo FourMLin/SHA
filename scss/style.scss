@@ -1458,6 +1458,10 @@ select {
     .inspect-operate-inner{
         padding: 30px 50px;
 
+        @media (max-width: 991px){
+            padding: 16px;
+        }
+
         form{
             margin: 30px 0;
         }
