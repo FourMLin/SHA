@@ -377,6 +377,10 @@ footer {
     .sha-text {
         flex: auto;
 
+        @media (max-width: 991px){
+            display: none;
+        }
+
         span {
             font-size: 14px;
         }
@@ -386,6 +390,10 @@ footer {
     .sha-ips{
         font-size: 12px;
         margin: auto 0;
+
+        @media (max-width: 991px){
+            display: none;
+        }
     }
 
     .mobile-nav{
@@ -543,6 +551,10 @@ footer {
     border-bottom: 1px solid $pale-gray;
     display: flex;
 
+    @media screen and (max-width: 991px){
+        display: block;
+    }
+
     h3 {
         flex: auto;
     }
@@ -559,6 +571,18 @@ footer {
 
     .btns {
         margin-left: 16px;
+
+        
+    }
+
+    @media screen and (max-width: 991px){
+        margin-top: 16px;
+
+        .btns{
+            margin-left: 0px;
+            margin-right: 16px;
+        }
+        
     }
 }
 
@@ -1488,6 +1512,7 @@ select {
         z-index: 98;
         opacity: 0;
         transition: opacity .3s ease-out;
+        display: none;
 
     }
 
@@ -1501,6 +1526,7 @@ select {
 
             &::after{
                 opacity: 1;
+                display: block;
     
             }
         }
@@ -1521,9 +1547,7 @@ select {
 
     @media (max-width: 991px){
         left: -100%;
-        max-width: 100%;
-
-        
+        max-width: 100%;  
     }
 
     .side-each {
