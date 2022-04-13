@@ -1148,10 +1148,12 @@ footer.light-gray {
 @media screen and (max-width: 991px) {
   .page-title-btns {
     margin-top: 16px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
   .page-title-btns .btns {
     margin-left: 0px;
-    margin-right: 16px;
   }
 }
 
@@ -1361,6 +1363,12 @@ select:focus {
   display: flex;
 }
 
+@media (max-width: 991px) {
+  .form-title .flex-block {
+    display: block;
+  }
+}
+
 .form-title .flex-block .text {
   -webkit-box-flex: 1;
       -ms-flex: auto;
@@ -1388,6 +1396,12 @@ select:focus {
   display: flex;
   padding: 8px 16px;
   cursor: pointer;
+}
+
+@media (max-width: 991px) {
+  .form-title .form-title-btn {
+    margin-top: 16px;
+  }
 }
 
 .form-title .form-title-btn:hover {
@@ -1439,6 +1453,13 @@ select:focus {
   max-width: 200px;
 }
 
+@media (max-width: 991px) {
+  .form-col .form-name {
+    min-width: 130px;
+    max-width: 130px;
+  }
+}
+
 .form-col .form-name span {
   margin: auto 0;
 }
@@ -1463,6 +1484,12 @@ select:focus {
   margin: auto 0;
   padding: 0 8px;
   white-space: nowrap;
+}
+
+@media (max-width: 991px) {
+  .form-col .form-group p {
+    white-space: unset;
+  }
 }
 
 .form-col .form-group .w-50 {

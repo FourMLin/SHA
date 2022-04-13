@@ -577,10 +577,10 @@ footer {
 
     @media screen and (max-width: 991px){
         margin-top: 16px;
+        justify-content: space-between;
 
         .btns{
             margin-left: 0px;
-            margin-right: 16px;
         }
         
     }
@@ -784,6 +784,10 @@ select {
     .flex-block{
         display: flex;
 
+        @media (max-width: 991px){
+            display: block;
+        }
+
         .text{
             flex: auto;
         }
@@ -810,6 +814,10 @@ select {
         display: flex;
         padding: 8px 16px;
         cursor: pointer;
+
+        @media (max-width: 991px){
+            margin-top: 16px;
+        }
 
         &:hover{
             background-color: $blue;
@@ -853,6 +861,11 @@ select {
         min-width: 200px;
         max-width: 200px;
 
+        @media (max-width: 991px){
+            min-width: 130px;
+            max-width: 130px;
+        }
+
         span {
             margin: auto 0;
         }
@@ -879,6 +892,10 @@ select {
             margin: auto 0;
             padding: 0 8px;
             white-space: nowrap;
+
+            @media (max-width: 991px){
+                white-space: unset;
+            }
         }
 
         .w-50 {
