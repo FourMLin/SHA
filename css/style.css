@@ -1060,6 +1060,10 @@ footer.light-gray {
   color: #ffffff;
 }
 
+.list-item .list-dropdown-inner .drop-list:hover a {
+  color: #ffffff;
+}
+
 .mobile-nav {
   padding: 8px 0;
   display: none;
