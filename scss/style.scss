@@ -856,7 +856,7 @@ select {
 }
 
 .form-top{
-    margin-bottom: 30px;
+    margin-bottom: 1.5rem;
 
     .form-name{
         margin-bottom: 8px;
@@ -1246,7 +1246,7 @@ select {
 
 .operate-part {
     display: flex;
-    margin-top: 35px;
+    margin-top: 30px;
 
     @media (max-width: 991px){
         display: block;
@@ -1464,6 +1464,7 @@ select {
 
 .carousel-block {
     position: relative;
+    max-height: 200px;
 
     .big-title {
         position: absolute;
