@@ -253,8 +253,7 @@ header {
 main {
 
     &.business {
-        padding: 20px 0 50px;
-        min-height: 95vh;
+        padding: 10px 0 30px;
     }
 
     &.inspect-mod {
@@ -1383,7 +1382,7 @@ select {
 .login-form {
 
     .l-block {
-        padding: 16px 0;
+        padding: 8px 0;
     }
 }
 
@@ -1470,7 +1469,7 @@ select {
         position: absolute;
         bottom: 15%;
         color: $white;
-        padding: 50px;
+        padding: 35px 50px;
         font-size: 50px;
     }
 }

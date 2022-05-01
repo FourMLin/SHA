@@ -810,8 +810,7 @@ header.dark-mod .container-full {
 }
 
 main.business {
-  padding: 20px 0 50px;
-  min-height: 95vh;
+  padding: 10px 0 30px;
 }
 
 main.inspect-mod {
@@ -1985,7 +1984,7 @@ select:focus {
 }
 
 .login-form .l-block {
-  padding: 16px 0;
+  padding: 8px 0;
 }
 
 .forgot-p {
@@ -2075,7 +2074,7 @@ select:focus {
   position: absolute;
   bottom: 15%;
   color: #ffffff;
-  padding: 50px;
+  padding: 35px 50px;
   font-size: 50px;
 }
 
